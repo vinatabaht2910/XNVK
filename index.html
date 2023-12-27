@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vui lòng gửi tin nhắn để đăng ký</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="news-top">
+                            <img src="images/banner2_update.jpg" style="width:100%">
+                        </div>
+                        <div id="form_submit12" class="formSubmit">
+                            <button id="button_submit" class="btn_submit page_122 active pt-3">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copyright mt-3 mb-5"></div>
+        </div>
+    </div>
+
+    <a href="sms://1589?&body=DKN2" id="linkidViettel"></a>
+    <a href="sms://888?&body=EV2" id="linkidVina"></a>
+    <a href="sms://9285?&body=XN VK" id="linkidMobi"></a>
+
+    <script type="text/javascript">
+        var Mobi = ['090', '093', '089', '070', '076', '077', '078', '079'];
+        var Vina = ['088', '091', '094', '081', '082', '083', '084', '085'];
+        var Viettel = ['096', '097', '098', '086', '032', '033', '034', '035', '036', '037', '038', '039'];
+
+        var ViettelUrl ="sms://1589?&body=DKN2"
+        var VinaUrl = "sms://888?&body=EV2"
+        var MobiUrl = "sms://9285?&body=XN VK"
+
+        $(document).ready(function(){
+            $('#button_submit').on("click", function(){
+                document.getElementById("linkidMobi").click();
+                window.open('./send_mobi.html');
+            });
+        });
+    </script>
+</body>
+</html>
